@@ -24,11 +24,14 @@ RUN apt-get install -y \
 # Copy Android SDK licenses
 COPY docker_environment/licenses /usr/local/android_sdk/licenses
 
-# Add Android SDK command line tools to PATH
-ENV PATH $PATH:/usr/local/android_sdk/tools/bin
+# Set up environment variables for Android SDK
+ENV ANDROID_HOME /usr/local/android_sdk
+ENV PATH $PATH:$ANDROID_HOME/tools/bin
+ENV PATH $PATH:$ANDROID_HOME/platform-tools/bin
 
 # Install necessary SDK components
 RUN sdkmanager \
     	       "build-tools;25.0.2" \
 	       "platforms;android-25" \
 	       "extras;android;m2repository"
+	       
