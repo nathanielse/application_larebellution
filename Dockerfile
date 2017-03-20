@@ -34,4 +34,9 @@ RUN sdkmanager \
     	       "build-tools;25.0.2" \
 	       "platforms;android-25" \
 	       "extras;android;m2repository"
+
+# Install Node.js
+RUN apt-get install -y curl && \
+    curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
+    apt-get install -y nodejs
 	       
