@@ -1,0 +1,8 @@
+version: "2.0"
+services:
+  dev:
+    build:
+      context: .
+    volumes:
+      - .:/code
+    working_dir: /code
