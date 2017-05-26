@@ -11,6 +11,18 @@ RUN apt-get update && \
     	    openjdk-8-jdk-headless \
 	    openjdk-8-jre-headless
 
+# Install Gradle
+RUN apt-get install -y \
+            unzip \
+            wget && \
+    wget --quiet https://services.gradle.org/distributions/gradle-3.5-bin.zip && \
+    unzip gradle-3.5-bin.zip && \
+    mv gradle-3.5 /usr/local/gradle && \
+    rm -rf gradle-3.5-bin.zip
+
+# Add Gradle to the PATH variable
+ENV PATH $PATH:/usr/local/gradle/bin
+
 # Install Android SDK command line tools
 RUN mkdir /usr/local/android_sdk
 
@@ -46,3 +58,5 @@ RUN apt-get install -y curl && \
     curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
     apt-get install -y nodejs
 	       
+# Install Cordova
+RUN npm install -g cordova
