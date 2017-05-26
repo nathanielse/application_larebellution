@@ -29,7 +29,10 @@ ENV ANDROID_HOME /usr/local/android_sdk
 ENV PATH $PATH:$ANDROID_HOME/tools/bin
 ENV PATH $PATH:$ANDROID_HOME/platform-tools/bin
 
-# Install necessary SDK components
+# Install necessary Android SDK components
+# The required SDK components are provided
+# in Apache Cordova documentation :
+# https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#adding-sdk-packages
 RUN sdkmanager \
     	       "build-tools;25.0.2" \
 	       "platforms;android-25" \
