@@ -35,6 +35,9 @@ RUN sdkmanager \
 	       "platforms;android-25" \
 	       "extras;android;m2repository"
 
+# Install Android emulator
+RUN sdkmanager "emulator"
+
 # Install Node.js
 RUN apt-get install -y curl && \
     curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
