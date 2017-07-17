@@ -57,6 +57,10 @@ RUN sdkmanager "emulator"
 RUN apt-get install -y curl && \
     curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
     apt-get install -y nodejs
+
+# Install bzip2
+# Used for installing PhantomJS required by ember-cordova
+RUN apt-get install -y bzip2
 	       
 # Install Cordova
 RUN npm install -g cordova
