@@ -62,5 +62,5 @@ RUN apt-get install -y curl && \
 # Used for installing PhantomJS required by ember-cordova
 RUN apt-get install -y bzip2
 	       
-# Install Cordova
-RUN npm install -g cordova
+# Install Ember CLI
+RUN npm install --global ember-cli@2.14.0
