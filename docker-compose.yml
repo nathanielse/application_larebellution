@@ -1,8 +1,7 @@
 version: "2.0"
 services:
   dev:
-    build:
-      context: .
+    image: nathanielse/application_larebellution:test
     volumes:
       - .:/code
     working_dir: /code
