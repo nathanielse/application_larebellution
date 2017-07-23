@@ -30,6 +30,7 @@
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
     "ember-cordova": "^1.0.2",
+    "ember-cordova-splash": "^0.1.4",
     "ember-data": "~2.14.3",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
