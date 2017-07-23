@@ -32,3 +32,6 @@ ember-cordova/cordova/plugins/*
 !ember-cordova/cordova/plugins/.gitkeep
 ember-cordova/cordova/www/*
 !ember-cordova/cordova/www/.gitkeep
+
+# Emacs temporary files
+*/**/*~
